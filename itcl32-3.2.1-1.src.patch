@@ -1,4 +1,3 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x configure itcl3.2.1-orig/itcl/configure.in itcl3.2.1/itcl/configure.in
 --- itcl3.2.1-orig/itcl/configure.in	2001-08-13 11:12:08.000000000 -0500
 +++ itcl3.2.1/itcl/configure.in	2006-05-09 17:03:02.000000000 -0500
 @@ -108,7 +108,11 @@
@@ -58,7 +57,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  	if test "${SHARED_BUILD}" = "1" ; then
  	    SHLIB_LD_LIBS="\"`cygpath -w ${TCL_BIN_DIR}/${TCL_STUB_LIB_FILE}`\" ${TCL_SHLIB_LD_LIBS}"
  	    eval "${PACKAGE}_LIB_FILE=${PACKAGE}${SHARED_LIB_SUFFIX}"
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x configure itcl3.2.1-orig/itk/configure.in itcl3.2.1/itk/configure.in
 --- itcl3.2.1-orig/itk/configure.in	2001-08-13 11:14:29.000000000 -0500
 +++ itcl3.2.1/itk/configure.in	2006-05-09 17:03:55.000000000 -0500
 @@ -104,7 +104,11 @@
@@ -118,7 +116,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  	if test "${SHARED_BUILD}" = "1" ; then
  	    SHLIB_LD_LIBS="\"`cygpath -w ${TCL_BIN_DIR}/${TCL_STUB_LIB_FILE}`\" ${TCL_SHLIB_LD_LIBS} \"`${CYGPATH} ../itcl/${itclstub_LIB_FILE}`\" ${tkstub_LIB_SPEC} "
  	    eval "${PACKAGE}_LIB_FILE=${PACKAGE}${SHARED_LIB_SUFFIX}"
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x configure itcl3.2.1-orig/tcl.m4 itcl3.2.1/tcl.m4
 --- itcl3.2.1-orig/tcl.m4	2001-06-21 23:41:05.000000000 -0500
 +++ itcl3.2.1/tcl.m4	2006-05-08 20:40:30.000000000 -0500
 @@ -303,7 +303,7 @@
