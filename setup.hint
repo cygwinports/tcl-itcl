@@ -1,5 +1,5 @@
 category: Interpreters
-requires: cygwin tcl84 tk84
+requires: tcl84 tk84
 sdesc: "[incr Tcl/Tk/Widgets] Object-Oriented extensions for Tcl/Tk"
 ldesc: "[incr Tcl] is an object-oriented extension of the Tcl language. 
 It was created to support more structured programming in Tcl. [incr Tcl]
