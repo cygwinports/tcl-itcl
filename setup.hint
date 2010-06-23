@@ -1,6 +1,6 @@
-category: Interpreters
-requires: tcl84 tk84
-sdesc: "[incr Tcl/Tk/Widgets] Object-Oriented extensions for Tcl/Tk"
+category: Tcl
+requires: libgcc1 tcl
+sdesc: "Object-Oriented extensions for Tcl"
 ldesc: "[incr Tcl] is an object-oriented extension of the Tcl language. 
 It was created to support more structured programming in Tcl. [incr Tcl]
 introduces the notion of objects. Among other things, [incr Tcl] can be
