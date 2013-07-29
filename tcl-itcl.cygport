@@ -14,6 +14,8 @@ HOMEPAGE="http://incrtcl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/incrtcl/itcl${VERSION}.tar.gz"
 SRC_DIR="itcl${VERSION}"
 
+REQUIRES="tcl"
+
 DISTCLEANFILES="aclocal.m4"
 
 src_compile() {
