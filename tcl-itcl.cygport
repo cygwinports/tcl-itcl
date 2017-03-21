@@ -1,7 +1,7 @@
 inherit tcl
 
 NAME="tcl-itcl"
-VERSION=3.4.1
+VERSION=4.0.3
 RELEASE=1
 CATEGORY="Tcl"
 SUMMARY="Object-Oriented extensions for Tcl"
@@ -14,9 +14,24 @@ HOMEPAGE="http://incrtcl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/incrtcl/itcl${VERSION}.tar.gz"
 SRC_DIR="itcl${VERSION}"
 
-REQUIRES="tcl"
+PKG_NAMES="${NAME} ${NAME}-devel"
+tcl_itcl_REQUIRES="tcl"
+tcl_itcl_CONTENTS="
+	usr/bin/libitcl4.0.3.dll
+	usr/lib/itcl4.0.3/itcl*.tcl
+	usr/lib/itcl4.0.3/pkgIndex.tcl
+	usr/share/doc/${NAME}/
+	usr/share/man/mann/
+"
+tcl_itcl_devel_REQUIRES="tcl-devel"
+tcl_itcl_devel_CONTENTS="
+	usr/include/itcl*.h
+	usr/lib/itcl4.0.3/itclConfig.sh
+	usr/lib/itcl4.0.3/libitcl4.0.3.dll.a
+	usr/lib/itcl4.0.3/libitclstub4.0.3.a
+"
 
-DISTCLEANFILES="aclocal.m4"
+#DISTCLEANFILES="aclocal.m4"
 
 src_compile() {
 	cd ${S}
@@ -27,15 +42,12 @@ src_compile() {
 }
 
 src_install() {
-	local vv=(${VERSION//./ })
-	local slot=${vv[0]}.${vv[1]}
-
 	cd ${B}
 	cyginstall
 
-	insinto /usr/lib/itcl${slot}
-	doins libitcl${slot}.dll.a
+	insinto /usr/lib/itcl${VERSION}
+	doins libitcl${VERSION}.dll.a
 
-	mv ${D}/usr/lib/itcl${slot}/libitcl${slot}.dll ${D}/usr/bin
-	sed -i -e "s|\"\(libitcl${slot}.dll\)\"|.. .. bin \1|" ${D}/usr/lib/itcl${slot}/pkgIndex.tcl
+	mv ${D}/usr/lib/itcl${VERSION}/libitcl${VERSION}.dll ${D}/usr/bin
+	sed -i -e "s|\"\(libitcl${VERSION}.dll\)\"|.. .. bin \1|" ${D}/usr/lib/itcl${VERSION}/pkgIndex.tcl
 }
